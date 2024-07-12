@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block body %} 
+
+<!-- Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .title {
+        color: #ff4757;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .current-limit {
+        color: #2f3542;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+
+    .btn-custom {
+        background-color: #ffa502;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+        background-color: #e67e22;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 10px;
+        }
+
+        .title {
+            font-size: 1.2rem;
+        }
+
+        .current-limit {
+            font-size: 1rem;
+        }
+
+        .btn-custom {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="title">
+        <p>Currently, your MONTHLY limit is Ksh {{ y }}</p>
+    </div>
+
+    <form action="/limitnum" method="POST">
+        <div class="form-group">
+            <label for="number">ENTER the MONTHLY LIMIT to avoid overspending</label>
+            <input type="number" name="number" id="number" class="form-control" required/>
+        </div>
+        <button class="btn btn-custom" type="submit">ENTER</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+{% endblock %}

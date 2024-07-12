@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block body %} 
+
+<!-- Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .container {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    h1 {
+        color: red;
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-family: monospace;
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+
+    .img-main {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 30px;
+    }
+
+    .btn-custom {
+        background-color: #ff4757;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+        background-color: #e84118;
+    }
+
+    .modal-header {
+        background-color: #ff4757;
+        color: white;
+    }
+
+    .modal-footer .btn {
+        background-color: #ff4757;
+        color: white;
+    }
+</style>
+
+<div class="container">
+    <div class="ccc">
+        <img src="../static/images/images (13).jpeg" alt="" class="img-main">
+        <h1>LET'S START THE JOURNEY</h1>
+        <p>My expense tracker web application helps<br> you to maintain your budget<br>
+            and analyze your expenses</p>
+        <img height="13%" width="13%" src="../static/images/istockphoto-943300706-612x612.jpg" alt="">
+    </div>
+    <button class="btn btn-custom" data-toggle="modal" data-target="#infoModal">Let's Begin</button>
+</div>
+
+
+<!-- Bootstrap and jQuery JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        // Custom JS can go here
+        console.log("Page loaded and ready.");
+    });
+</script>
+
+{% endblock %}
